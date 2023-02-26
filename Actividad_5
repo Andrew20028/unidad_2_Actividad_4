@@ -1,0 +1,25 @@
+/*
+Realizar un programa que inicialice una lista con 10 valores aleatorios (del 1 al 10)
+y posteriormente muestre en pantalla cada elemento de la lista junto con su cuadrado y su cubo.
+ */
+package proyecto_5;
+
+import java.util.Random;
+
+public class Proyecto5 {
+
+    public static void main(String[] args) {
+        Random cont= new Random();
+        int numero;
+
+        for(int i =0; i<10;i++){
+            numero=(cont.nextInt(10)+1);
+            System.out.print("el numero es: "+numero +"  ");
+            //utilizaremos numero* numero para que se eleve al cuadrado 
+            System.out.print("su cuadrado es: "+numero*numero +"  ");
+            // aca se hara los mismo numero*numero*numero para que nos de el valor al cubo 
+            System.out.println("su cubo es: "+numero*numero*numero);
+            
+        }
+    }   
+}

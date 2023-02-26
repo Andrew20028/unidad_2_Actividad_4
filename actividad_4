@@ -1,0 +1,42 @@
+/*
+4. Crear un programa que añada números a una lista hasta que introducimos un
+número negativo. A continuación, debe crear una nueva lista igual que la
+anterior, pero eliminando los números duplicados. Muestra esta segunda lista
+para comprobar que hemos eliminados los duplicados.
+*/
+package proyecto.pkg4;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Proyecto4 {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+      Scanner numeros=new Scanner(System.in);
+      ArrayList<Integer> listaNumerica= new ArrayList<Integer>();
+      
+      int numero;
+        System.out.println("Agregar los numeros");
+        
+        do{
+            numero= numeros.nextInt();
+            listaNumerica.add(numero);
+                        
+        }while (0<numero);
+        System.out.println();
+        for(int numero:listaNumerica){
+            System.out.println(numeros+"");
+        }
+        Set numerosLista=new HashSet<>(listaNumerica);
+        listaNumerica.clear();
+        listaNumerica.add(numerosLista);
+        System.out.println();
+        for (int numeroNoDupli: listaNumerica){
+            System.out.println(numeroNoDupli);
+        }
+        
+    }
+   
+}

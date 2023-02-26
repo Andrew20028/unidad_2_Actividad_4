@@ -1,0 +1,67 @@
+
+package proyecto2;
+
+public class Nodo {
+    int dato;
+    Nodo siguiente;
+    public Nodo(int dato){
+        this.dato=dato;
+        this.siguiente=null;
+        
+    }
+}
+//
+/*
+ 2. Ingresar a una lista enlazada simple n elementos y calcular cual es el mayor
+de la lista. Imprimir el número mayor y luego la lista.
+*/
+package proyecto2;
+
+public class Proyecto2 {
+    private Nodo primero;
+    private int size;
+    public Proyecto2(){
+        this.primero=null;
+        this.size=0;
+    }
+
+    public void addNodo(int dato){
+        Nodo nuevo=new Nodo(dato);
+        nuevo.siguiente=primero;
+        primero=nuevo;
+        size++;       
+    }
+    public int Size(){
+        return size;
+    }
+    public void Listar(){
+        Nodo actual = primero;
+        while(actual !=null){
+            System.out.println("["+actual.dato+"]");
+            actual=actual.siguiente;
+        }
+    }
+    public static void main(String[] args) {
+        Proyecto2 lista=new Proyecto2();
+        lista.ListaVacia();
+        System.out.println("");
+        lista.addNodo(1);
+        lista.addNodo(2);
+        lista.addNodo(3);
+        lista.addNodo(4);
+        lista.addNodo(5);
+        lista.Listar();
+        System.out.println("tamaño "+lista.Size());
+        System.out.println("el numero mayor es");
+        lista.ListaVacia();
+    }
+        public void ListaVacia(){
+        if (primero ==null){
+            System.out.println("La lista esta vacia");
+     
+        }else{
+            System.out.println("La lista tiene datos");
+        }
+    }
+
+}
